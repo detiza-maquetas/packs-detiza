@@ -42,12 +42,13 @@
    <p class="hint">Elige uno de los 6 favoritos o cualquier color de la carta. Mismo precio en mate y en satinado.</p>
    <div class="favh">Favoritos para puertas</div>
    <div class="tins" id="colors"></div>
-   <div class="gal" id="gal"><div class="gtrack" id="gtrack"></div><button class="gnav gp" data-d="-1" aria-label="Anterior">‹</button><button class="gnav gn" data-d="1" aria-label="Siguiente">›</button><div class="gfoot"><span id="gcap"></span><span class="gdots" id="gdots"></span></div></div>
+   <div class="thumbs" id="thumbs"></div><p class="gcap" id="gcap"></p>
    <div class="carta">
     <div class="favh">Toda la carta Essential · <span id="ncol"></span> colores por tonalidad</div>
-    <div class="tabs" id="tabs" role="tablist"></div>
-    <div class="cgrid" id="cgrid"></div>
-    <p class="src">Tonalidades y colores: carta Essential de la web. La muestra pequeña es aproximada, sacada de la foto de cada color. ★ = favorito para puertas, con galería completa.</p>
+    <p class="hint">Pulsa una tonalidad para ver sus colores.</p>
+    <div class="tins tones" id="tabs"></div>
+    <div class="tpanel" id="tpanel"><div class="tph" id="tph"></div><div class="cgrid" id="cgrid"></div></div>
+    <p class="src">Tonalidades y colores: carta Essential de la web. La muestra pequeña es aproximada, sacada de la foto de cada color. La latita de cada tonalidad lleva un color real de esa familia. ★ = favorito para puertas, con galería completa.</p>
    </div>
    <div class="seg" id="finish"><button data-f="Mate" class="on">Mate</button><button data-f="Satinado">Satinado</button></div>
    <p class="chosen" id="chosen"></p>
@@ -74,15 +75,33 @@
  </aside>
 </div></section></div>
 
-<section class="bg-salvia"><div class="wrap">
- <div class="sec-head"><span class="eyebrow">Cómo se hace</span><h2>Tu puerta en 5 pasos</h2></div>
- <div class="mini">
-  <div class="step"><span class="n">1</span><div><h3>Limpia</h3><p>Con Super Clean o con agua y amoniaco. Aclara con agua.</p></div></div>
-  <div class="step"><span class="n">2</span><div><h3>Primer</h3><p>Con el rodillo blanco. Seca de 8 a 24 h.</p></div></div>
-  <div class="step"><span class="n">3</span><div><h3>1.ª mano</h3><p>Essential. Seca al menos 4 h (hasta 8 si hace frío).</p></div></div>
-  <div class="step"><span class="n">4</span><div><h3>Lija fina</h3><p>Solo si quedan imperfecciones. Quita el polvo con un trapo húmedo.</p></div></div>
-  <div class="step"><span class="n">5</span><div><h3>2.ª mano</h3><p>Lista para usar en 2–3 días. Cura del todo a los 21.</p></div></div>
- </div>
+<section class="bg-salvia" id="pasos"><div class="wrap">
+ <div class="sec-head"><span class="eyebrow">Cómo se hace</span><h2>Tu puerta paso a paso</h2><p class="lead" style="max-width:640px;margin:8px auto 0">Antes de empezar, remueve bien la pintura. Al Primer y a la pintura conviene echarles un 5&nbsp;% de agua para que no estén tan espesos.</p></div>
+ <ol class="pasos">
+  <li class="paso"><span class="n">1</span><div><h3>Limpia la puerta</h3>
+   <p>Diluye 1 parte de Super Clean en 5 de agua y aplícalo con pulverizador. Ve por zonas pequeñas para que no se seque. Deja actuar 5 minutos, cepilla y aclara con abundante agua. También puedes limpiar con agua y amoniaco, retirándolo muy bien con agua clara.</p>
+   <p class="pend-l">Pasar lija fina o estropajo para limpiar (no es lijar) <span class="pend">[pendiente de confirmar]</span></p>
+   <div class="meta"><span class="tool">🧴 Super Clean o agua y amoniaco</span><span class="time">⏱ Deja secar <span class="pend">[tiempo pendiente de confirmar]</span></span></div></div></li>
+  <li class="paso"><span class="n">2</span><div><h3>Aplica el Primer</h3>
+   <p>Da el Primer (imprimación) con el rodillo blanco. En muebles muy oscuros, da una mano de Primer y una segunda de Primer mezclada con un 50&nbsp;% de pintura.</p>
+   <div class="meta"><span class="tool">🖌 Rodillo blanco</span><span class="tool">Manos: 1 <span class="pend">[pendiente de confirmar]</span> · 2 en muebles muy oscuros</span><span class="time">⏱ Seca al tacto en 30–60 min</span></div></div></li>
+  <li class="paso wait"><span class="n">3</span><div><h3>Espera antes de pintar</h3>
+   <p>Deja secar el Primer antes de la primera mano de Essential. De Tiza recomienda 12 horas.</p>
+   <div class="meta"><span class="time big">⏱ De 8 a 24 h</span></div></div></li>
+  <li class="paso"><span class="n">4</span><div><h3>1.ª mano de Essential</h3>
+   <p>Pinta con el minirodillo (rodillo azul).</p>
+   <div class="meta"><span class="tool">🖌 Minirodillo de 10 cm (rodillo azul)</span><span class="time">⏱ Seca al tacto: <span class="pend">[pendiente de confirmar]</span></span></div></div></li>
+  <li class="paso wait"><span class="n">5</span><div><h3>Espera para la 2.ª mano</h3>
+   <p>Deja secar la primera mano. Si quedan imperfecciones, pasa una lija de grano fino y limpia el polvillo con un trapo húmedo.</p>
+   <div class="meta"><span class="time big">⏱ Al menos 4 h · hasta 8 h con frío o humedad</span><span class="tool">Lija de grano fino (solo si hace falta)</span></div></div></li>
+  <li class="paso"><span class="n">6</span><div><h3>2.ª mano de Essential</h3>
+   <p>Pinta la segunda mano con el rodillo azul. El número de manos depende del color base de la puerta y del color elegido.</p>
+   <div class="meta"><span class="tool">🖌 Minirodillo de 10 cm (rodillo azul)</span></div></div></li>
+  <li class="paso done"><span class="n">7</span><div><h3>Lista para usar</h3>
+   <p>Respeta los tiempos de secado. Para limpiarla después, usa agua y amoniaco, un desengrasante no muy abrasivo o jabón neutro. No la frotes con estropajos, rasquetas de vidrio ni cepillos que arañen.</p>
+   <div class="meta"><span class="time big">✓ Para usar: en 2 o 3 días</span><span class="time big">✓ Curado total: a los 21 días</span></div></div></li>
+ </ol>
+ <p class="src" style="text-align:center">Datos: fichas de Primer De Tiza, Pintura Essential, Minirodillo de 10 cm y Super Clean, y página de packs para pintar puertas de chalkpaintdetiza.es.</p>
 </div></section>
 
 <section class="bg-white"><div class="wrap">
@@ -108,6 +127,7 @@
  <div class="item" style="max-width:640px;margin:0 auto"><img src="img/Masterclass-pintar-puertas.jpg" alt="" style="width:96px;height:96px"><div><div class="nm">MasterClass Pintar Puertas y Cocinas</div><span class="small muted">Paso a paso, con apoyo técnico. Recibes el acceso por email.</span></div><span class="pr">49,95&nbsp;€</span></div>
 </div></section>
 
+<div class="lb" id="lb" hidden role="dialog" aria-label="Foto ampliada"><button class="lbx" aria-label="Cerrar">✕</button><button class="lbn lbp" data-d="-1" aria-label="Anterior">‹</button><img id="lbimg" src="" alt=""><button class="lbn lbnx" data-d="1" aria-label="Siguiente">›</button><div class="lbc" id="lbc"></div></div>
 <div class="mbar"><div class="t">Total<b id="mtotal"></b></div><a class="btn" href="#resumen">Añadir todo al carrito</a></div>
 <script>
 const P={e750:25.95,e250:15.95,p750:21.95,p250:11.45};
@@ -120,6 +140,7 @@ const CARTA={"tones":[{"slug":"blanco","name":"Blanco"},{"slug":"gris","name":"G
 const TONES=CARTA.tones, ALL=CARTA.colors;
 const FAVN=['Blanco Pergamino','Blanco Wevet','Lino','Salón de Té','Verde Oxford','Azul Antiguo'];
 const FAVHEX=['#E7DCC8','#FBF6F7','#E5D8C7','#F4EAE1','#6F7358','#BACCD1'];
+const TREP={'blanco':['Blanco Wevet','#FBF6F7'],'gris':['Gris París','#BFBEBA'],'beige':['Lino','#E5D8C7'],'marron':['Arcilla','#926F59'],'amarillo':['Amarillo Bali','#F9C874'],'verde':['Verde Oxford','#6F7358'],'azul':['Azul Jeans','#3078A2'],'rosa-y-malva':['Malva','#DFB3B6'],'rojo-y-naranja':['Rojo Calabaza','#D16852'],'negro':['Negro','#1E1A1A']};
 const FAV=FAVN.map((n,k)=>{const i=ALL.findIndex(c=>c.name.toLowerCase()==n.toLowerCase());ALL[i].hex=FAVHEX[k];ALL[i].fav=1;return i});
 const mix=(h,w)=>{const n=parseInt(h.slice(1),16),r=n>>16,g=n>>8&255,b=n&255,f=c=>Math.round(c+(255-c)*w);return `rgb(${f(r)},${f(g)},${f(b)})`};
 const TOOLS=[
@@ -130,7 +151,7 @@ const TOOLS=[
  ['Lija almohadilla','Lija · grano medio',0.99,'Web-Herramientas-Detiza-44.jpg'],
  ['Cinta Krepp 38x45','Cinta de carrocero',4.45,'Web-Herramientas-Detiza-19.jpg']];
 const params=new URLSearchParams(location.search);
-const idp=params.get('id');let st={s:+(params.get('s')??1),c:idp?ALL.findIndex(c=>c.slug==idp):FAV[+(params.get('c')??0)],g:0,tab:null,f:'Mate',t:new Set(params.get('all')?[0,1,2,3,4,5]:[])};
+const idp=params.get('id');let st={lb:null,s:+(params.get('s')??1),c:idp?ALL.findIndex(c=>c.slug==idp):FAV[+(params.get('c')??0)],g:0,tab:null,f:'Mate',t:new Set(params.get('all')?[0,1,2,3,4,5]:[])};
 const door=n=>'<span class="doors">'+Array.from({length:Math.min(n,5)},()=>'<i></i>').join('')+(n>5?'<em>+'+(n-5)+'</em>':'')+'</span>';
 const eur=v=>v.toFixed(2).replace('.',',')+'\u00a0€';
 const price=s=>s.e750*P.e750+s.e250*P.e250+s.p750*P.p750+s.p250*P.p250;
@@ -138,22 +159,23 @@ const $=id=>document.getElementById(id);
 function render(){
  $('sizes').innerHTML=SIZES.map((s,i)=>`<button class="sz${i==st.s?' on':''}" data-i="${i}">${s.tag?`<span class="tagm">${s.tag}</span>`:''}${door(s.d)}<span class="k">${s.k}</span><span class="r">${s.r}</span><span class="p">${eur(price(s))}</span></button>`).join('');
  const s=SIZES[st.s],C=ALL[st.c],col=[C.name,'',C.hex];
- if(st.tab==null)st.tab=C.tones[0];
  const rows=[];
  if(s.e750)rows.push([`${s.e750} × Pintura Essential 750 ml · ${col[0]}`,'@carta/'+C.thumb,s.e750*P.e750]);
  if(s.p750)rows.push([`${s.p750} × Primer De Tiza 750 ml`,'primer-e1643105426503.jpg',s.p750*P.p750]);
  if(s.p250)rows.push([`${s.p250} × Primer De Tiza 250 ml`,'primer-e1643105426503.jpg',s.p250*P.p250]);
  $('contents').innerHTML='<b style="font-size:13px">Incluye:</b>'+rows.map(r=>`<div class="row"><img src="${r[1][0]=='@'?'img/'+r[1].slice(1):'img/'+r[1]}" alt=""><span>${r[0]}</span><span>${eur(r[2])}</span></div>`).join('');
  $('colors').innerHTML=FAV.map(i=>`<button class="tin${i==st.c?' on':''}" data-c="${i}"><span class="lid" style="--c:${ALL[i].hex}"></span><span class="tn">${ALL[i].name}</span></button>`).join('');
- const G=C.gal?C.gal.map(f=>'img/galeria/'+f):['img/principal/'+C.thumb];
- if(st.g>=G.length)st.g=0;
- $('gtrack').innerHTML=G.map((f,k)=>`<img src="${f}" alt="Essential ${C.name}, foto ${k+1}" class="${k==st.g?'on':''}">`).join('');
- $('gcap').innerHTML=`<b>Essential ${C.name}</b> · ${C.gal?`foto ${st.g+1} de ${G.length} de la ficha`:'foto principal de la ficha'}`;
- $('gdots').innerHTML=G.length>1?G.map((_,k)=>`<i class="${k==st.g?'on':''}" data-g="${k}"></i>`).join(''):'';
- $('gal').classList.toggle('one',G.length<2);
+ const G=C.gal?C.gal.map(f=>'img/galeria/'+f):['img/principal/'+C.thumb]; window.G=G;
+ $('thumbs').innerHTML=G.map((f,k)=>`<button class="th" data-lb="${k}" aria-label="Ver foto ${k+1} en grande"><img src="${f}" alt="Essential ${C.name}, foto ${k+1}"><span>⤢</span></button>`).join('');
+ $('gcap').innerHTML=`<b>Essential ${C.name}</b> · ${C.gal?`${G.length} ${G.length>1?'fotos':'foto'} de la ficha`:'foto principal de la ficha'} · pulsa para ampliar`;
  $('ncol').textContent=ALL.length;
- $('tabs').innerHTML=TONES.map(t=>`<button role="tab" class="tab${t.slug==st.tab?' on':''}${C.tones.includes(t.slug)?' has':''}" data-t="${t.slug}">${t.name} <small>${ALL.filter(c=>c.tones.includes(t.slug)).length}</small></button>`).join('');
- $('cgrid').innerHTML=ALL.map((c,i)=>[c,i]).filter(([c])=>c.tones.includes(st.tab)).map(([c,i])=>`<button class="cc${i==st.c?' on':''}" data-c="${i}" title="Essential ${c.name}"><span class="dot" style="--c:${c.hex}"></span><span class="cn">${c.name}${c.fav?' <em>★</em>':''}</span></button>`).join('');
+ $('tabs').innerHTML=TONES.map(t=>`<button class="tin tone${t.slug==st.tab?' on':''}${C.tones.includes(t.slug)?' has':''}" data-t="${t.slug}" aria-expanded="${t.slug==st.tab}" title="Color de la latita: Essential ${TREP[t.slug][0]}"><span class="lid" style="--c:${TREP[t.slug][1]}"></span><span class="tn">${t.name}</span><small>${ALL.filter(c=>c.tones.includes(t.slug)).length} colores</small></button>`).join('');
+ $('tpanel').classList.toggle('open',!!st.tab);
+ if(st.tab){const T=TONES.find(t=>t.slug==st.tab);$('tph').innerHTML=`<b>${T.name}</b> · ${ALL.filter(c=>c.tones.includes(st.tab)).length} colores <button class="tclose" data-t="${st.tab}">Cerrar ✕</button>`;
+ $('cgrid').innerHTML=ALL.map((c,i)=>[c,i]).filter(([c])=>c.tones.includes(st.tab)).map(([c,i])=>`<button class="cc${i==st.c?' on':''}" data-c="${i}" title="Essential ${c.name}"><span class="dot" style="--c:${c.hex}"></span><span class="cn">${c.name}${c.fav?' <em>★</em>':''}</span></button>`).join('');}
+ else{$('tph').innerHTML='';$('cgrid').innerHTML='';}
+ if(st.lb!=null){$('lb').hidden=false;$('lbimg').src=G[st.lb];$('lbimg').alt='Essential '+C.name;$('lbc').textContent=`Essential ${C.name} · ${st.lb+1} / ${G.length}`;$('lb').classList.toggle('one',G.length<2);document.body.style.overflow='hidden';}
+ else{$('lb').hidden=true;document.body.style.overflow='';}
  $('band').style.setProperty('--tint',mix(col[2],0.62));
  $('band').style.setProperty('--tint2',mix(col[2],0.8));
  document.querySelectorAll('#finish button').forEach(b=>b.classList.toggle('on',b.dataset.f==st.f));
@@ -169,16 +191,20 @@ function render(){
  const tot=price(s)+tsum; $('total').textContent=eur(tot); $('mtotal').textContent=eur(tot);
 }
 document.addEventListener('click',e=>{
- const sz=e.target.closest('.sz'),cl=e.target.closest('[data-c]'),fb=e.target.closest('#finish button'),tb=e.target.closest('.tab'),gn=e.target.closest('.gnav'),gd=e.target.closest('[data-g]');
- if(sz)st.s=+sz.dataset.i; else if(cl){st.c=+cl.dataset.c;st.g=0;if(cl.classList.contains('tin'))st.tab=ALL[st.c].tones[0];} else if(fb)st.f=fb.dataset.f;
- else if(tb)st.tab=tb.dataset.t; else if(gn){const n=(ALL[st.c].gal||[1]).length;st.g=(st.g+ +gn.dataset.d+n)%n;} else if(gd)st.g=+gd.dataset.g;
+ const sz=e.target.closest('.sz'),fb=e.target.closest('#finish button'),tb=e.target.closest('[data-t]'),th=e.target.closest('[data-lb]'),ln=e.target.closest('.lbn'),cl=e.target.closest('[data-c]');
+ if(e.target.closest('.lbx')||e.target.id=='lb'){st.lb=null;}
+ else if(ln){const n=G.length;st.lb=(st.lb+ +ln.dataset.d+n)%n;}
+ else if(th)st.lb=+th.dataset.lb;
+ else if(sz)st.s=+sz.dataset.i; else if(cl){st.c=+cl.dataset.c;} else if(fb)st.f=fb.dataset.f;
+ else if(tb){st.tab=st.tab==tb.dataset.t?null:tb.dataset.t;}
  else if(e.target.closest('#all')){st.t=st.t.size==6?new Set():new Set([0,1,2,3,4,5]);}
  else if(e.target.closest('.askbtn')){alert('Maqueta: aquí se abriría el chat Oct8ne «Chat IA DeTiza» de la web');return;}
  else if(e.target.id=='addall'){$('added').style.display='block';return;}
  else return;
  render();
 });
-let tx=null;$('gal').addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});$('gal').addEventListener('touchend',e=>{if(tx==null)return;const dx=e.changedTouches[0].clientX-tx;tx=null;const n=(ALL[st.c].gal||[1]).length;if(Math.abs(dx)>40&&n>1){st.g=(st.g+(dx<0?1:-1)+n)%n;render();}});
+document.addEventListener('keydown',e=>{if(st.lb==null)return;if(e.key=='Escape')st.lb=null;else if(e.key=='ArrowRight')st.lb=(st.lb+1)%G.length;else if(e.key=='ArrowLeft')st.lb=(st.lb-1+G.length)%G.length;else return;render();});
+let tx=null;$('lb').addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});$('lb').addEventListener('touchend',e=>{if(tx==null)return;const dx=e.changedTouches[0].clientX-tx;tx=null;if(Math.abs(dx)>40&&G.length>1){st.lb=(st.lb+(dx<0?1:-1)+G.length)%G.length;render();}});
 render();
 </script>
 <footer class="footer"><div class="wrap"><div class="cols">
