@@ -145,7 +145,7 @@ function render(){
  if(s.p250)rows.push([`${s.p250} × Primer De Tiza 250 ml`,'primer-e1643105426503.jpg',s.p250*P.p250]);
  $('contents').innerHTML='<b style="font-size:13px">Incluye:</b>'+rows.map(r=>`<div class="row"><img src="${r[1][0]=='@'?'img/'+r[1].slice(1):'img/'+r[1]}" alt=""><span>${r[0]}</span><span>${eur(r[2])}</span></div>`).join('');
  $('colors').innerHTML=FAV.map(i=>`<button class="tin${i==st.c?' on':''}" data-c="${i}"><span class="lid" style="--c:${ALL[i].hex}"></span><span class="tn">${ALL[i].name}</span></button>`).join('');
- const G=C.gal?C.gal.map(f=>'img/galeria/'+f):['img/carta/'+C.thumb];
+ const G=C.gal?C.gal.map(f=>'img/galeria/'+f):['img/principal/'+C.thumb];
  if(st.g>=G.length)st.g=0;
  $('gtrack').innerHTML=G.map((f,k)=>`<img src="${f}" alt="Essential ${C.name}, foto ${k+1}" class="${k==st.g?'on':''}">`).join('');
  $('gcap').innerHTML=`<b>Essential ${C.name}</b> · ${C.gal?`foto ${st.g+1} de ${G.length} de la ficha`:'foto principal de la ficha'}`;
