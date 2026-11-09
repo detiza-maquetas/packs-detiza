@@ -1,0 +1,24 @@
+.band{background:linear-gradient(180deg,var(--tint,#FBF6EF) 0%,var(--tint2,#FBF6EF) 100%);transition:background .4s}
+.band .stepbox,.band .summary{background:#fff}
+.band .summary{background:#FFFDFB}
+.bg-white{background:#fff}.bg-crema{background:#FBF6EF}
+.bg-salvia{background:#E3E2DA} /* tinte suave de Essential Verde Macilla (aprox.) */
+.bg-rosa{background:#FBEDEA}   /* tinte suave de Essential Rosa Nude (aprox.) */
+.bg-salvia .step{background:#fff}
+.colwrap{display:grid;gap:12px}
+.tins{grid-template-columns:repeat(3,1fr);gap:14px 8px}
+.tin{background:none;border:0;cursor:pointer;font:inherit;display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--ink)}
+.tin .lid{width:78px;height:78px;border-radius:50%;position:relative;
+ background:radial-gradient(circle at 50% 50%,var(--c) 0 58%,#d9d9d9 59%,#f4f4f4 64%,#bdbdbd 69%,#ececec 74%,#cfcfcf 100%);
+ box-shadow:0 3px 10px rgba(0,0,0,.18),inset 0 0 0 1px rgba(0,0,0,.08)}
+.tin .lid:after{content:"";position:absolute;inset:16px;border-radius:50%;box-shadow:inset 0 2px 4px rgba(0,0,0,.18)}
+.tin .tn{font-size:12.5px;font-weight:700;text-align:center;line-height:1.2}
+.tin.on .lid{outline:3px solid var(--coral);outline-offset:4px}
+.tin.on .tn{color:var(--coral-d)}
+.colfig{margin:0;display:flex;gap:12px;align-items:center;background:var(--cream);border-radius:14px;padding:8px}
+.colfig img{width:84px;height:84px;object-fit:cover;object-position:35% 60%;border-radius:10px}
+.colfig figcaption{font-weight:700;font-size:14px}
+@media(min-width:900px){
+ .tins{grid-template-columns:repeat(6,1fr)}
+ .tin .lid{width:84px;height:84px}
+}
