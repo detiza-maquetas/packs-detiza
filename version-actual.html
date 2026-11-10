@@ -145,7 +145,7 @@ function render(){
  $('all').innerHTML=st.t.size?'✓ Herramientas añadidas (+21,78 €) · <u>Quitar</u>':'Añadir todas las herramientas (+21,78 €)';
  $('all').classList.toggle('on',st.t.size>0);
  $('pname').textContent=`${s.k} · ${s.r} · ${col[0]} · ${st.f}`;
- let L='<div class="grp">Pack</div>'+rows.map(r=>`<div class="l"><span>${r[0]}</span></div>`).join('');
+ let L='<div class="grp">Pack</div>'+rows.map(r=>`<div class="l"><span>${r[0]}</span><span>${eur(r[2])}</span></div>`).join('');
  if(st.t.size)L+='<div class="grp">Herramientas</div>'+[...st.t].sort().map(i=>`<div class="l"><span>${TOOLS[i][0]}</span><span>${eur(TOOLS[i][2])}</span></div>`).join('');
  $('lines').innerHTML=L;
  const tot=price(s)+tsum; $('total').textContent=eur(tot); $('mtotal').textContent=eur(tot);
